@@ -1,5 +1,5 @@
 
-import { _decorator, Component, systemEvent, SystemEvent, Event, EventKeyboard, CCInteger, Vec2, Vec3, tween, Node, Animation, AnimationComponent } from 'cc';
+import { _decorator, Component, systemEvent, SystemEvent, Event, EventKeyboard, CCInteger, Vec2, Vec3, tween, Node, Animation, AnimationComponent, Input, input } from 'cc';
 const { ccclass, property } = _decorator;
 
 /**
@@ -44,8 +44,8 @@ export class Controler extends Component {
     }
 
     onLoad = () => {
-        systemEvent.on(SystemEvent.EventType.KEY_DOWN, this.handleKeyDown);
-        systemEvent.on(SystemEvent.EventType.KEY_UP, this.handleKeyUp);
+        input.on(Input.EventType.KEY_DOWN, this.handleKeyDown);
+        input.on(Input.EventType.KEY_UP, this.handleKeyUp);
 
         this.aniComp = this.node.getComponent(Animation);
     }

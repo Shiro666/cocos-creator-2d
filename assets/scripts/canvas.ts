@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, EventHandler, Button, Event } from 'cc';
+import { _decorator, Component, Node, EventHandler, Button, Event, CameraComponent, Camera } from 'cc';
 const { ccclass, property } = _decorator;
 
 /**
@@ -20,15 +20,19 @@ export class Canvas extends Component {
     // dummy = '';
 
     @property(Node)
+    camera: Node = null;
+
+    @property(Node)
     player: Node = null;
 
     start () {
         console.log('player', this.player);
     }
 
-    // update (deltaTime: number) {
-        
-    // }
+    update (deltaTime: number) {
+        this.camera.position.set(this.player.position.x, this.player.position.y, 1000);
+        this.camera.updateWorldTransform();
+    }
 }
 
 /**
