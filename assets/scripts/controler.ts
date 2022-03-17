@@ -72,6 +72,7 @@ export class Controler extends Component {
         } else if (y) {
             this.setAniState(y > 0 ? 'walk_up' : 'walk_down');
         } else {
+            this.setAniState('');
             this.aniComp.pause();
         }
 
@@ -83,6 +84,6 @@ export class Controler extends Component {
     setAniState = (aniState: string) => {
         if (aniState === this.aniState) return;
         this.aniState = aniState;
-        this.aniComp.play(aniState);
+        aniState && this.aniComp.play(aniState);
     }
 }
