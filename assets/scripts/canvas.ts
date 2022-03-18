@@ -30,8 +30,7 @@ export class Canvas extends Component {
     }
 
     update (deltaTime: number) {
-        this.camera.position.set(this.player.position.x, this.player.position.y, 1000);
-        this.camera.updateWorldTransform();
+        this.camera.setWorldPosition(this.player.worldPosition.x, this.player.worldPosition.y, 1000);
     }
 }
 
