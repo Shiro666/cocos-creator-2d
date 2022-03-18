@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, Camera } from 'cc';
+import { _decorator, Component, Node, Camera, PhysicsSystem2D } from 'cc';
 const { ccclass, property } = _decorator;
 
 /**
@@ -27,6 +27,7 @@ export class mapControl extends Component {
 
     start () {
         // [3]
+        PhysicsSystem2D.instance.debugDrawFlags = 1;
     }
 
     update (deltaTime: number) {

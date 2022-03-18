@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, EventHandler, Button, Event, CameraComponent, Camera } from 'cc';
+import { _decorator, Component, Node } from 'cc';
 const { ccclass, property } = _decorator;
 
 /**

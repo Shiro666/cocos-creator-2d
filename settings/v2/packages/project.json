@@ -1,0 +1,29 @@
+{
+  "physics": {
+    "collisionGroups": [
+      {
+        "index": 1,
+        "name": "player"
+      },
+      {
+        "index": 2,
+        "name": "wall"
+      }
+    ],
+    "collisionMatrix": {
+      "0": 1,
+      "1": 4,
+      "2": 2
+    }
+  },
+  "layer": [
+    {
+      "name": "player",
+      "value": 1
+    },
+    {
+      "name": "wall",
+      "value": 2
+    }
+  ]
+}
