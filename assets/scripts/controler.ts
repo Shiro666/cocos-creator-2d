@@ -1,5 +1,6 @@
 
-import { _decorator, Component, systemEvent, SystemEvent, Event, EventKeyboard, CCInteger, Vec2, Vec3, tween, Node, Animation, AnimationComponent, Input, input } from 'cc';
+import { _decorator, EventKeyboard, Node, Animation, AnimationComponent, Input, input } from 'cc';
+import { RoleBase } from './base/role';
 const { ccclass, property } = _decorator;
 
 /**
@@ -15,7 +16,7 @@ const { ccclass, property } = _decorator;
  */
  
 @ccclass('Controler')
-export class Controler extends Component {
+export class Controler extends RoleBase {
 
     private Input: {} = {};
     private aniComp: AnimationComponent;
@@ -23,19 +24,6 @@ export class Controler extends Component {
 
     @property(Node)
     player: Node = null;
-
-    @property({
-        type: CCInteger,
-        displayName: '生命值',
-        min: 0,
-        max: 100
-    })
-    HP = 100;
-
-    @property({
-        displayName: '速度'
-    })
-    speed: Vec2 = new Vec2(1, 1);
 
     start () {}
 
@@ -60,11 +48,11 @@ export class Controler extends Component {
 
     handleMove = () => {
         let x = 0;
-        this.Input['37'] && (x -= this.speed.x);
-        this.Input['39'] && (x += this.speed.x);
+        this.Input['37'] && (x -= this.Speed);
+        this.Input['39'] && (x += this.Speed);
         let y = 0;
-        this.Input['40'] && (y -= this.speed.y);
-        this.Input['38'] && (y += this.speed.y);
+        this.Input['40'] && (y -= this.Speed);
+        this.Input['38'] && (y += this.Speed);
 
         let aniState = '';
         if (x) {
