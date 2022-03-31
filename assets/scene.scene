@@ -19,16 +19,19 @@
       },
       {
         "__id__": 60
+      },
+      {
+        "__id__": 62
       }
     ],
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 62
+      "__id__": 64
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 63
+      "__id__": 69
     },
     "_id": "db347993-b98a-4f37-b0a9-7102f1d11f14"
   },
@@ -203,7 +206,7 @@
         "__id__": 32
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 35
@@ -1024,7 +1027,7 @@
     "propertyPath": [
       "_name"
     ],
-    "value": "CellMap"
+    "value": "CellMapOwn"
   },
   {
     "__type__": "cc.TargetInfo",
@@ -1095,17 +1098,17 @@
       "__id__": 47
     },
     "asset": {
-      "__uuid__": "e3b4e26c-36b2-4501-99d9-81c3589a0702",
+      "__uuid__": "ba8949b9-38d9-4f53-9e75-716b0a7827c9",
       "__expectedType__": "cc.Prefab"
     },
-    "fileId": "17XnUjCkZGKoVN1ZHVI1T6",
+    "fileId": "edeCBYemxMQ5Dr68mGaurE",
     "instance": {
       "__id__": 49
     }
   },
   {
     "__type__": "cc.PrefabInstance",
-    "fileId": "d7nTpDaF9CqbyYv0ZSzzJC",
+    "fileId": "depG/hKuxCcKNTRGjwiA7k",
     "mountedChildren": [],
     "mountedComponents": [],
     "propertyOverrides": [
@@ -1132,12 +1135,12 @@
     "propertyPath": [
       "_name"
     ],
-    "value": "CellMap"
+    "value": "CellMapEnemy"
   },
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "17XnUjCkZGKoVN1ZHVI1T6"
+      "edeCBYemxMQ5Dr68mGaurE"
     ]
   },
   {
@@ -1344,8 +1347,76 @@
     "_id": "e20yJ25jZBJb3cX02nSQ5H"
   },
   {
+    "__type__": "cc.Node",
+    "_name": "BattleManager",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 63
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "48npvcQvRDwZJhqDAz/j9k"
+  },
+  {
+    "__type__": "958f5J4Yf9HvJ6uB1iFu13E",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 62
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "mapOwn": null,
+    "mapEnemy": null,
+    "rolePrefab": {
+      "__uuid__": "1063bc5d-59a5-45da-8ec4-18922505798b",
+      "__expectedType__": "cc.Prefab"
+    },
+    "_id": "23TaQKDRpNvJEz4VyVungr"
+  },
+  {
     "__type__": "cc.PrefabInfo",
     "fileId": "db347993-b98a-4f37-b0a9-7102f1d11f14",
+    "targetOverrides": [
+      {
+        "__id__": 65
+      },
+      {
+        "__id__": 67
+      }
+    ],
     "nestedPrefabInstanceRoots": [
       {
         "__id__": 16
@@ -1359,21 +1430,65 @@
     ]
   },
   {
+    "__type__": "cc.TargetOverrideInfo",
+    "source": {
+      "__id__": 63
+    },
+    "sourceInfo": null,
+    "propertyPath": [
+      "mapOwn"
+    ],
+    "target": {
+      "__id__": 39
+    },
+    "targetInfo": {
+      "__id__": 66
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "1659LmaqVFKIe0JkbIrMna"
+    ]
+  },
+  {
+    "__type__": "cc.TargetOverrideInfo",
+    "source": {
+      "__id__": 63
+    },
+    "sourceInfo": null,
+    "propertyPath": [
+      "mapEnemy"
+    ],
+    "target": {
+      "__id__": 47
+    },
+    "targetInfo": {
+      "__id__": 68
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "1emcOoaqtNS5W0Qs4Jo9jE"
+    ]
+  },
+  {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 64
+      "__id__": 70
     },
     "shadows": {
-      "__id__": 65
+      "__id__": 71
     },
     "_skybox": {
-      "__id__": 66
+      "__id__": 72
     },
     "fog": {
-      "__id__": 67
+      "__id__": 73
     },
     "octree": {
-      "__id__": 68
+      "__id__": 74
     }
   },
   {
