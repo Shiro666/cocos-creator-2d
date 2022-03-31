@@ -1,17 +1,11 @@
 
 import { _decorator, Component, Node } from 'cc';
-const { ccclass, property } = _decorator;
+import { cellMapBase } from './cellMapBase';
+const { ccclass } = _decorator;
 
 
 @ccclass('map')
-export class cellMap extends Component {
-    // [1]
-    // dummy = '';
-    public cellList: Node[] = [];
-
-    // [2]
-    // @property
-    // serializableDummy = 0;
+export class cellMapOwn extends cellMapBase {
 
     onLoad = () => {
         this.cellList = this.node.children;

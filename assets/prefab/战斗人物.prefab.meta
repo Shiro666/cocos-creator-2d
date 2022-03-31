@@ -2,12 +2,12 @@
   "ver": "1.1.35",
   "importer": "prefab",
   "imported": true,
-  "uuid": "e3b4e26c-36b2-4501-99d9-81c3589a0702",
+  "uuid": "1063bc5d-59a5-45da-8ec4-18922505798b",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "CellMap"
+    "syncNodeName": "战斗人物"
   }
 }
