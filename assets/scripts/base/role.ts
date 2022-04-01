@@ -5,11 +5,19 @@ const { property } = _decorator;
 export class RoleBase extends Component {
     @property({
         type: CCInteger,
-        displayName: '生命力',
+        displayName: '当前生命力',
         min: 0,
         max: 9999
     })
     HP = 100;
+
+    @property({
+        type: CCInteger,
+        displayName: '最大生命力',
+        min: 0,
+        max: 9999
+    })
+    MAX_HP = 100;
 
     @property({
         type: CCInteger,
@@ -79,4 +87,7 @@ export class RoleBase extends Component {
         // 更新相关状态
         return HP > 0;
     }
+
+    /** 战斗 */
+    action = async () => {}
 }

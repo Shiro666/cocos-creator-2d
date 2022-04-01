@@ -1,6 +1,6 @@
 
 import { _decorator, Component, Node } from 'cc';
-import { cellMapBase } from './cellMapBase';
+import { cellMapBase } from '../base/cellMapBase';
 const { ccclass } = _decorator;
 
 
