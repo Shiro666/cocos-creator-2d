@@ -23,7 +23,20 @@ export class battalRole extends RoleBase {
     //     // [4]
     // }
 
-    public initRole = () => {
+    /** 初始化角色 */
+    initRole = () => {
         console.log('initRole');
+    }
+
+    /** 开始行动 */
+    action = async () => {
+        await this.showActionMenu();
+    }
+
+    /** 展示行动命令选择菜单 */
+    showActionMenu = () => {
+        return new Promise((resolve) => {
+            resolve(1);
+        })
     }
 }
